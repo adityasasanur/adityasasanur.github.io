@@ -22,7 +22,7 @@
   "worksFor": { "@type": "Organization", "name": "Capital One" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" },
   "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" },
-  "email": "mailto:adityasasanur@gmail.com",
+  "email": "mailto:sasanuraditya@gmail.com",
   "url": "https://adityasasanur.github.io/",
   "sameAs": ["https://www.linkedin.com/in/aditya-sasanur/"],
   "knowsAbout": ["Recommender systems", "Machine learning", "Distributed training", "Low-latency model serving", "Time-series forecasting"]
@@ -226,6 +226,22 @@
   .facts li:last-child, .pubs li:last-child { border-bottom: 0; }
   .facts strong { color: var(--accent); font-weight: 700; }
   .pubs .title { display: block; font-weight: 500; }
+  .pubs a.title { text-decoration-color: var(--line); text-underline-offset: 3px; }
+  .talk-links { list-style: none; margin: 1.1rem 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .talk-links a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 3rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .talk-links li:last-child a { border-bottom: 0; padding-bottom: 0; }
+  .talk-links a > span:first-child { color: var(--accent); }
+  .talk-links .detail { color: var(--muted); font-weight: 400; font-size: 0.9375rem; }
   .pubs .venue { display: block; margin-top: 0.15rem; color: var(--muted); font-size: 0.9375rem; }
 
   details.qr { margin-top: 2rem; }
@@ -267,7 +283,7 @@
   <a class="primary" href="https://www.linkedin.com/in/aditya-sasanur/" target="_blank" rel="noopener">Connect on LinkedIn</a>
   <ul class="links">
     <li><a href="resume.pdf" target="_blank" rel="noopener"><span>Resume</span><span class="detail">PDF, 1 page</span></a></li>
-    <li><a href="mailto:adityasasanur@gmail.com?subject=Met%20you%20at%20RecSys%20'26"><span>Email</span><span class="detail">adityasasanur@gmail.com</span></a></li>
+    <li><a href="mailto:sasanuraditya@gmail.com?subject=Met%20you%20at%20RecSys%20'26"><span>Email</span><span class="detail">sasanuraditya@gmail.com</span></a></li>
     <li><a href="contact.vcf"><span>Save contact</span><span class="detail">Add to phone</span></a></li>
   </ul>
 
@@ -286,12 +302,17 @@
     <p class="paper">SeqPack: Interactive Composable Sequence Compression for Real-time Recommender Systems</p>
     <p class="credit">Demo track paper, co-first author</p>
     <p class="body">SeqPack is a model-agnostic layer that compresses user interaction sequences for real-time recommender systems. It comes with a Python library and a browser-based Compression Playground, which I'm demoing live at the conference.</p>
+    <ul class="talk-links">
+      <li><a href="https://seqcomp.onrender.com" target="_blank" rel="noopener"><span>Try the Playground</span><span class="detail">Live demo</span></a></li>
+      <li><a href="https://dl.acm.org/doi/10.1145/3773078.3841279" target="_blank" rel="noopener"><span>Read the paper</span><span class="detail">ACM DL</span></a></li>
+      <li><a href="https://github.com/CapitalOne-Research/sequence-compression" target="_blank" rel="noopener"><span>Code</span><span class="detail">GitHub</span></a></li>
+    </ul>
   </section>
 
   <section class="section" aria-labelledby="pubs-h">
     <h2 id="pubs-h">Publications</h2>
     <ul class="pubs">
-      <li><span class="title">SeqPack: Interactive Composable Sequence Compression for Real-time Recommender Systems</span><span class="venue">RecSys 2026, demo track</span></li>
+      <li><a class="title" href="https://dl.acm.org/doi/10.1145/3773078.3841279" target="_blank" rel="noopener">SeqPack: Interactive Composable Sequence Compression for Real-time Recommender Systems</a><span class="venue">RecSys 2026, demo track</span></li>
       <li><span class="title">Large Scale Hierarchical Industrial Demand Time-Series Forecasting</span><span class="venue">KDD 2024, second author</span></li>
       <li><span class="title">Time-MMD: A Multi-Domain, Multimodal Dataset for Time Series Analysis</span><span class="venue">NeurIPS 2024, Datasets and Benchmarks</span></li>
     </ul>
